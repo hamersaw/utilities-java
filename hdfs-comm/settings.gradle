@@ -1,0 +1,4 @@
+rootProject.name = 'hdfs-comm'
+
+include ':hdfs-protos'
+project(':hdfs-protos').projectDir = new File(settingsDir, '../hdfs-protos')
