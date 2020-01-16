@@ -17,7 +17,7 @@ def javaHome = "$System.env.JAVA_HOME"
       
 // generate jni headers        
 task generateJniHeaders(type: Exec) {
-    commandLine "javac", "-h", "$nativeIncludeDir", "-d", "$nativeIncludeDir", "src/main/java/com/bushpath/anamnesis/checksum/Checksum.java", "src/main/java/com/bushpath/anamnesis/checksum/NativeChecksumCRC32.java"
+    commandLine "javac", "-h", "$nativeIncludeDir", "-d", "$nativeIncludeDir", "src/main/java/com/bushpath/hdfs-comm/checksum/Checksum.java", "src/main/java/com/bushpath/hdfs-comm/checksum/NativeChecksumCRC32.java"
 }
 
 // compile cpp program

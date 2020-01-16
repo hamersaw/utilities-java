@@ -1,4 +1,4 @@
-package com.bushpath.anamnesis.ipc.rpc;
+package com.bushpath.hdfs_comm.ipc.rpc;
 
 public class SocketContext {
     protected String effectiveUser;

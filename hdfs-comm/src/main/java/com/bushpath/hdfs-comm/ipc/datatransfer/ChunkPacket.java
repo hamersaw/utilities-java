@@ -1,4 +1,4 @@
-package com.bushpath.anamnesis.ipc.datatransfer;
+package com.bushpath.hdfs_comm.ipc.datatransfer;
 
 public class ChunkPacket {
     private boolean lastPacketInBlock;

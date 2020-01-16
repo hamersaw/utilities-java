@@ -1,8 +1,8 @@
-package com.bushpath.anamnesis.ipc.datatransfer;
+package com.bushpath.hdfs_comm.ipc.datatransfer;
 
 import org.apache.hadoop.hdfs.protocol.proto.DataTransferProtos;
 
-import com.bushpath.anamnesis.checksum.Checksum;
+import com.bushpath.hdfs_comm.checksum.Checksum;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

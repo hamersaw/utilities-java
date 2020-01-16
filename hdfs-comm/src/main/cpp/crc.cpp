@@ -1,4 +1,4 @@
-#include <com_bushpath_anamnesis_checksum_NativeChecksumCRC32.h>
+#include <com_bushpath_hdfs_comm_checksum_NativeChecksumCRC32.h>
 
 #include <netinet/in.h>
 #include <sys/ipc.h>
@@ -18,7 +18,7 @@ uint32_t crc32c_sb8(uint32_t crc, const uint8_t *buf, size_t length);
 uint32_t crc32_zlib_sb8(uint32_t crc, const uint8_t *buf, size_t length);
 
 JNIEXPORT void JNICALL
-    Java_com_bushpath_anamnesis_checksum_NativeChecksumCRC32_nativeBulkCompute(
+    Java_com_bushpath_hdfs_comm_checksum_NativeChecksumCRC32_nativeBulkCompute(
         JNIEnv *env, jobject obj, jbyteArray j_buffer, jint offset, jint length,
         jbyteArray j_cbuffer, jint coffset, jint clength, jint bytes_per_checksum) {
 
@@ -55,7 +55,7 @@ JNIEXPORT void JNICALL
 }
 
 JNIEXPORT jint JNICALL 
-    Java_com_bushpath_anamnesis_checksum_NativeChecksumCRC32_nativeCompute(
+    Java_com_bushpath_hdfs_comm_checksum_NativeChecksumCRC32_nativeCompute(
         JNIEnv *env, jobject obj, jbyteArray j_buffer,
         jint offset, jint length) {
 
