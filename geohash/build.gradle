@@ -1,0 +1,13 @@
+apply plugin: 'java'
+
+version = "1.0.0"
+
+// define repositories
+repositories {
+    mavenCentral()
+}
+
+// define dependencies
+dependencies {
+    testImplementation 'junit:junit:4.12'
+}
