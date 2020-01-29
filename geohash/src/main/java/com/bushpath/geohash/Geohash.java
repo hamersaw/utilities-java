@@ -18,7 +18,7 @@ public class Geohash {
                 index <<= 1;
                 if (j % 2 == 0) {
                     double midLat = (minLat + maxLat) / 2.0;
-                    if (latitude > midLat) {
+                    if (latitude >= midLat) {
                         index |= 1;
                         minLat = midLat;
                     } else {
@@ -26,7 +26,7 @@ public class Geohash {
                     }
                 } else {
                     double midLong = (minLong + maxLong) / 2.0;
-                    if (longitude > midLong) {
+                    if (longitude >= midLong) {
                         index |= 1;
                         minLong = midLong;
                     } else {
