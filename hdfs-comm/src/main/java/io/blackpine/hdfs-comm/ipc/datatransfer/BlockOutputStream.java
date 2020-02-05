@@ -1,8 +1,8 @@
-package com.bushpath.hdfs_comm.ipc.datatransfer;
+package io.blackpine.hdfs_comm.ipc.datatransfer;
 
 import org.apache.hadoop.hdfs.protocol.proto.DataTransferProtos;
 
-import com.bushpath.hdfs_comm.checksum.Checksum;
+import io.blackpine.hdfs_comm.checksum.Checksum;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

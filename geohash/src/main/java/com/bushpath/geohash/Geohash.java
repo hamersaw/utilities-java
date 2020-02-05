@@ -1,4 +1,4 @@
-package com.bushpath.geohash;
+package io.blackpine.geohash;
 
 public class Geohash {
     public static final char[] CODES16 = {'0', '1', '2', '3', '4',

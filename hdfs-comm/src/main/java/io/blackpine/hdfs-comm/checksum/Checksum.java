@@ -1,4 +1,4 @@
-package com.bushpath.hdfs_comm.checksum;
+package io.blackpine.hdfs_comm.checksum;
 
 public abstract class Checksum {
     public abstract long compute(byte[] buffer, int offset, int length);

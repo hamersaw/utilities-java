@@ -1,4 +1,4 @@
-package com.bushpath.hdfs_comm.ipc.rpc;
+package io.blackpine.hdfs_comm.ipc.rpc;
 
 import com.google.protobuf.CodedOutputStream;
 import com.google.protobuf.Message;

@@ -1,7 +1,7 @@
-package com.bushpath.hdfs_comm.ipc.rpc;
+package io.blackpine.hdfs_comm.ipc.rpc;
 
-import com.bushpath.hdfs_comm.ipc.rpc.packet_handler.PacketHandler;
-import com.bushpath.hdfs_comm.ipc.rpc.packet_handler.RpcPacketHandler;
+import io.blackpine.hdfs_comm.ipc.rpc.packet_handler.PacketHandler;
+import io.blackpine.hdfs_comm.ipc.rpc.packet_handler.RpcPacketHandler;
 
 import java.net.ServerSocket;
 import java.net.Socket;

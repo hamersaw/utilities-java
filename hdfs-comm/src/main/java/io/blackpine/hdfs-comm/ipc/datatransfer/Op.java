@@ -1,4 +1,4 @@
-package com.bushpath.hdfs_comm.ipc.datatransfer;
+package io.blackpine.hdfs_comm.ipc.datatransfer;
 
 import java.io.DataInput;
 import java.io.DataOutput;

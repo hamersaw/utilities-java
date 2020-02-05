@@ -1,4 +1,4 @@
-#include <com_bushpath_hdfs_comm_checksum_NativeChecksumCRC32.h>
+#include <io_blackpine_hdfs_comm_checksum_NativeChecksumCRC32.h>
 
 #include <netinet/in.h>
 #include <sys/ipc.h>
