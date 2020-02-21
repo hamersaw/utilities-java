@@ -1,0 +1,85 @@
+syntax = 'proto2';
+
+package nahfs;
+
+option java_package = "io.blackpine.nahfs.protocol.proto";
+option java_outer_classname = "NahFSProtos";
+option java_generate_equals_and_hash = true;
+
+message BlockMetadataProto {
+    required uint32 version = 1;
+    required uint64 blockId = 2;
+    required uint64 length = 3;
+    optional BlockIndexProto index = 4;
+}
+
+message BlockIndexProto {
+    optional TemporalIndexProto temporalIndex = 1;
+    optional SpatialIndexProto spatialIndex = 2;
+}
+
+message TemporalIndexProto {
+    required uint64 startTimestamp = 1;
+    required uint64 endTimestamp = 2;
+}
+
+message SpatialIndexProto {
+    repeated string geohashes = 1;
+    repeated uint32 startIndices = 2;
+    repeated uint32 endIndices = 3;
+}
+
+/**
+ * datanode communication messages
+ */
+message getIndexReplicasRequestProto {
+    required string datanodeId = 1;
+    required uint32 replication = 2;
+    required BlockIndexProto blockIndex = 3;
+}
+
+message getIndexReplicasResponseProto {
+    repeated bytes datanodeIdProtos = 1;
+}
+
+message GetStoragePolicyRequestProto {
+    required uint32 id = 1;
+}
+
+message GetStoragePolicyResponseProto {
+    required string storagePolicy = 1;
+}
+
+message IndexReportRequestProto {
+    repeated uint64 blockIds = 1;
+    repeated BlockIndexProto blockIndices = 2;
+}
+
+message IndexReportResponseProto {
+}
+
+/**
+ * cli communication messages
+ */
+/*message IndexViewRequestProto {
+}
+
+message IndexViewResponseProto {
+    map<uint64, BlockIndexProto> blocks = 1;
+}*/
+
+message InodePersistRequestProto {
+}
+
+message InodePersistResponseProto {
+}
+
+message BlockFilterRequestProto {
+    required string filter = 1; 
+    repeated uint64 blockIds = 2;
+}
+
+message BlockFilterResponseProto {
+    repeated uint64 blockIds = 1;
+    repeated uint64 blockLengths = 2;
+}

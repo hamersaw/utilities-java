@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'com.google.protobuf'
+
+version = "1.0.0"
+
+// define repositories
+repositories {
+    mavenCentral()
+}
+
+// define dependencies
+dependencies {
+    compile 'com.google.protobuf:protobuf-java:2.6.1'
+    compile 'io.grpc:grpc-protobuf:1.6.1' // for com.google.common.primitives
+}
+
+// build script
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.8'
+    }
+}
+
+// protobuf protoc
+protobuf{
+    protoc {
+        artifact = 'com.google.protobuf:protoc:2.6.1'
+    }
+}
